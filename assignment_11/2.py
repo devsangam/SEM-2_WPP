@@ -1,0 +1,11 @@
+import pandas as pd
+s = pd.Series (["X", "Y", "T", "Aaba", "Baca", "CABA", None, "bird", "horse", "dog"])
+upper_series = s.str.upper()
+print("Series with Uppercase Values:")
+print(upper_series)
+lower_series = s.str.lower()
+print("\nSeries with Lowercase Values:")
+print(lower_series)
+length_series = s.str.len()
+print("\nLength of Each String:")
+print(length_series)

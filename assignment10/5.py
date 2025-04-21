@@ -1,0 +1,10 @@
+import numpy as np
+arr = np.array(['1234567890123456', '123', '111111', '2222'], dtype=str)
+print("Original Array:")
+print(arr)
+c = np.char.center(arr, 15, fillchar='_')
+l = np.char.ljust(arr, 15, fillchar='_')
+r = np.char.rjust(arr, 15, fillchar='_')
+print("Center =", c)
+print("Left =", l)
+print("Right =", r) 

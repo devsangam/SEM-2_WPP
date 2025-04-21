@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickBite - Online Food Delivery</title>
+  <link rel="stylesheet" href="style_new.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">QuickBite</div>
+      <nav>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="close-btn" id="close-btn">&times;</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Order</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Fresh &amp; Fast Delivery</h1>
+      <p>Your favorite meals delivered right to your door.</p>
+      <div class="hero-search">
+        <input type="search" placeholder="Search dishes...">
+        <select>
+          <option value="">Select Location</option>
+          <option value="downtown">Downtown</option>
+          <option value="suburbs">Suburbs</option>
+          <option value="uptown">Uptown</option>
+        </select>
+      </div>
+      <button class="btn">Order Now</button>
+    </div>
+  </section>
+  <section class="featured">
+    <div class="featured-container">
+      <h2>Featured Dishes</h2>
+      <div class="dishes">
+        <div class="dish">
+          <img src="F1.jpg" alt="Pizza">
+          <div class="dish-info">
+            <h3>Pizza Margherita</h3>
+            <p>Classic pizza with fresh basil, mozzarella, and tomatoes.</p>
+            <div class="order-btn">Order Now</div>
+          </div>
+        </div>
+        <div class="dish">
+          <img src="F2.jpg" alt="Burger">
+          <div class="dish-info">
+            <h3>Burger Deluxe</h3>
+            <p>Juicy beef patty with fresh lettuce, tomato, and cheese.</p>
+            <div class="order-btn">Order Now</div>
+          </div>
+        </div>
+        <div class="dish">
+          <img src="F3.jpg" alt="Sushi">
+          <div class="dish-info">
+            <h3>Sushi Platter</h3>
+            <p>A selection of sushi and sashimi, prepared fresh.</p>
+            <div class="order-btn">Order Now</div>
+          </div>
+        </div>
+        <div class="dish">
+          <img src="F4.jpg" alt="Pasta">
+          <div class="dish-info">
+            <h3>Pasta Primavera</h3>
+            <p>Pasta tossed with seasonal vegetables and a light sauce.</p>
+            <div class="order-btn">Order Now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 QuickBite. All Rights Reserved.</p>
+  </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const closeBtn = document.getElementById('close-btn');
+    
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.add('active');
+      hamburger.style.display = 'none';
+    });
+    
+    closeBtn.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      hamburger.style.display = 'flex';
+    });
+  </script>
+</body>
+</html>

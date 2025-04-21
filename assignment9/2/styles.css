@@ -1,0 +1,212 @@
+body{    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.banner a:hover{
+    color: red;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+marquee{
+    color: red;
+}
+.badge{
+    width: 7%;
+    margin: 10px;
+}
+.longform_logo{
+    width: 45%;
+}
+.vallabhbhai{
+    width: 6%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.nav_list{
+    background-color: yellow;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.department li{margin: 10px;}
+.department, .nav_menu{
+    display: none;
+}
+.right, .left{width: 15%;}
+.right ul, .left ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+.right ul li, .left ul li{
+    background-color: yellow;
+    padding: 10px;
+}
+.center img{
+    display: none;
+}
+.center .display{
+    display: block;
+}
+.center{
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width:50%;
+}
+.center img{
+    width: 100%;
+    height: fit-content;
+    border: 2px solid black;
+    min-width: 400px;
+    align-self: center;
+}
+.center button{
+    height: 40px;
+    width: 20px;
+    align-self: center;
+}
+.notices{
+    display: flex;
+    flex-direction: column;
+}
+.notices a{margin-left: 10px;}
+.new_alert{width: 7%;}
+.alerts{
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    gap: 10px;
+}
+.notices .notice_column{
+    display: flex;
+    justify-content: space-evenly;
+}
+.column{
+    width: 30%;
+}
+.notice_heading{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+
+}
+.achievements h3{
+    margin-left: 10px;
+}
+.achievement_photos{
+    display: flex;
+    justify-content: space-evenly;
+    gap:3%;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.achievement_photos img{
+    width: 20%;
+    min-height: 150px;
+    border: 2px solid black;
+}
+.footer_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    background-color: rgb(44, 44, 46);
+    color:white;
+    align-items: center;
+}
+.footer a{color: white;}
+.footer div{padding: 10px;}
+.end{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(61, 61, 61);
+    color:white;
+    height: fit-content;
+}
+
+.department.clicked{
+    display: flex;
+    flex-direction: column;
+}
+.left{margin-left: 25px;}
+.right{margin-right: 25px;}
+
+@media screen and (max-width:920px) {
+    .navbar a{
+        display: block;
+        text-align: center;
+        background-color: yellow;
+        padding: 15px;
+    }
+    .nav_list{
+        display: none;
+    }
+    .nav_list.clicked{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 2px;
+    }
+
+    .department li{
+        text-align: center;
+        }
+    .banner{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .center{
+        width: 90%;
+        margin-left:5% ;
+        margin-right:5% ;
+
+    }
+    .notice_column{
+        flex-direction: column;
+        width:100%;
+        align-items: center;
+    }
+    .column{width: 70%;}
+    .achievement_photos{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .achievements h3{text-align: center;}
+    .achievement_photos img{width: 70%;}
+    .left,.right{width: 70%;}
+}

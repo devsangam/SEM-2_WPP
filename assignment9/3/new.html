@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RazerTech - PC Hardware Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">RazerTech</div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Hardware</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <button class="categories-toggle" id="toggleCategories">Categories</button>
+  
+  <div class="categories-bar" id="categoriesBar">
+    <div class="categories-container">
+      <a href="#">Graphics Cards</a>
+      <a href="#">Processors</a>
+      <a href="#">Motherboards</a>
+      <a href="#">Memory</a>
+      <a href="#">Storage</a>
+      <a href="#">Cooling</a>
+    </div>
+  </div>
+
+  <div class="main-container">
+    
+    <div class="banner">
+      <h1>Best PC Hardware Deals</h1>
+    </div>
+    <div class="products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="4090.jpg" alt="GPU">
+          <div class="product-info">
+            <h3>RTX 4090</h3>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="ryzen.webp" alt="CPU">
+          <div class="product-info">
+            <h3>Pro CPU</h3>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="ram.webp" alt="RAM">
+          <div class="product-info">
+            <h3>High-Speed RAM</h3>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="product">
+          <img src="ssd.jpg" alt="SSD">
+          <div class="product-info">
+            <h3>Fast SSD</h3>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <footer>
+    <p>&copy; 2025 RazerTech. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('toggleCategories');
+    const categoriesBar = document.getElementById('categoriesBar');
+    
+    toggleButton.addEventListener('click', () => {
+      categoriesBar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

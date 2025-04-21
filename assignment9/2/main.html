@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <title>SVNIT, Surat</title>
+</head>
+<body>
+    <div class="header">
+        <img src="badge.png" alt="badge" class="badge">
+        <img src="longform_logo.png" alt="longform_logo" class="longform_logo">
+        <img src="vallabhbhai.png" alt="vallabhbhai" class="vallabhbhai">
+    </div>
+    <div class="navbar">
+        <a href="javascript:void(0);", class="nav_menu", onclick="Nav()">
+            <i class="fa fa-bars" aria-hidden="true" class="nav_button"></i>
+        </a>
+        <ul class="nav_list" id="NavList">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Administration</a></li>
+            <li><a href="">Academic</a></li>
+            <li>
+                <a href="javascript:void(0);" class="dept_menu" onclick="deptNav()">
+                    Department <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </a>
+                <ul class="department" id="Department">
+                    <li>Artificial Intelligence</li>
+                    <li>Computer Science</li>
+                    <li>Electronics</li>
+                </ul>
+            </li>
+
+            <li><a href="">Student Life</a></li>
+            <li><a href="">Research & Consultancy</a></li>
+            <li><a href="">Career Developement Cell</a></li>
+            <li><a href="">Central Facility</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="left">
+            <ul>
+                <li><a href=""></a>Minutes of Meetings</li>
+                <li><a href=""></a>Memorandum of Understanding</li>
+                <li><a href=""></a>Ek Bharat Shreshtha Bharat</li>
+                <li><a href=""></a>Achievements</li>
+                <li><a href=""></a>Central Library</li>
+                <li><a href=""></a>Alumni</li>
+                <li><a href=""></a>NIRF</li>
+                <li><a href=""></a>Career</li>
+                <li><a href=""></a>Vigilance Section</li>
+                <li><a href=""></a>RTI</li>
+                <li><a href=""></a>Employee Corner</li>
+            </ul>
+        </div>
+        <div class="center">
+        <button class="left_button" onclick="left()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+            <img src="one.jpg" alt="one" id="1" class="display">
+            <img src="two.png" alt="two" id="2" class="hidden">
+            <img src="three.png" alt="three" id="3" class="hidden">
+            <img src="four.jpg" alt="four" id="4" class="hidden">
+        <button class="right_button" onclick="right()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href=""></a>Samarth-eGov</li>
+                <li><a href=""></a>Chapters | Clubs | Society</li>
+                <li><a href=""></a>Magazine | Newsletter</li>
+                <li><a href=""></a>Admission</li>
+                <li><a href=""></a>Scholarship</li>
+                <li><a href=""></a>Fee Structure</li>
+                <li><a href=""></a>Academic Calender</li>
+                <li><a href=""></a>JoSAA | CCMT</li>
+                <li><a href=""></a>Hostel</li>
+                <li><a href=""></a>Fees Payment</li>
+                <li><a href=""></a>NCC | NSS | Yoga</li>
+                <li><a href=""></a>Cells</li>
+            </ul>
+        </div>
+    </div>
+    <div class="notices">
+        <marquee behavior="" direction="">Advertisement for the post of Registrar at SVNIT, Surat 
+            || 21st convocation: verification of student's details || SVNIT Anti-Ragging 
+            Helpline: antiragging_helpline@svnit.ac.in , 0261-2201602, +91-9157907783</marquee>
+        <div class="alerts">
+            <img src="new.png" alt="new_notices" class="new_alert">
+        <ul>
+            <li><a href="">Notice 1</a></li>
+            <li><a href="">Notice 2</a></li>
+            <li><a href="">Notice 3</a></li>
+        </ul>
+        </div>
+        <div class="notice_column">
+        <div class="column">
+            <div class="notice_heading">
+                <h3>Student Notice</h3>
+                <p><a href="">All notices</a></p>
+            </div>
+            <div>
+            <a href="">Notice 1</a><hr>
+            <a href="">Notice 2</a><hr>
+            <a href="">Notice 3</a><hr>
+            </div>
+        </div>
+        <div class="column">
+            <div class="notice_heading">
+                <h3>Events And Seminars</h3>
+                <p><a href="">All notices</a></p>
+            </div>
+            <div>
+                <a href="">Notice 1</a><hr>
+                <a href="">Notice 2</a><hr>
+                <a href="">Notice 3</a><hr>
+            </div>
+        </div>
+        <div class="column">
+            <div class="notice_heading">
+                <h3>Tenders and Enquieries</h3>
+                <p><a href="">All notices</a></p>
+            </div>
+            <div>
+                <a href="">Notice 1</a><hr>
+                <a href="">Notice 2</a><hr>
+                <a href="">Notice 3</a><hr>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="achievements">
+        <h3>Achievements</h3>
+        <div class="achievement_photos">
+            <img src="A1.jpg" alt="A1">
+            <img src="A2.jpg" alt="A4">
+            <img src="A3.jpg" alt="A3">
+            <img src="A4.jpg" alt="A2">
+        </div>
+    </div>
+    <div class="footer_wrapper">
+    <div class="footer">
+        <div>
+            <p>
+            Sardar Vallabhbhai National Institute of Technology,<br>
+            Ichchhanath, Surat-395007, Gujarat, INDIA
+            </p>
+        </div>
+        <div>
+            <p>
+                <a href="">Security</a> | <a href="">Post Office</a> | <a href="">Bank</a>
+            </p>
+        </div>
+        <div>
+            <p>
+                <a href="">Gallery</a> | <a href="">IT Policy Form</a> | <a href="">IT Policy</a>
+            </p>
+        </div>
+        <div>
+            <p>
+                <a href="">GST Information</a> | <a href=""> BIS Dashboard</a> | <a href="">Institute Timings</a>
+            </p>
+        </div>
+    </div>
+    <div class="end">
+        <p>Developed by: d3vd5k</p>
+    </div>
+</div>
+</body>
+</html>
