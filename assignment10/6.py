@@ -35,6 +35,6 @@ while(f(a, func)*f(b, func)>0):
     b=random.randint(-100, 100)
     x=np.append(x,a)
     y=np.append(y,b)
-# plt.plot(x,y)
-# plt.show()
+plt.plot(x,y)
+plt.show()
 find_root(a,b,x,y,func)
