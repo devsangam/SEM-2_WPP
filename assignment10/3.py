@@ -1,38 +1,52 @@
-import itertools
-import random
-import numpy as np
-def find_combinations(n):
-    numbers = range(1, n*n + 1)
-    target = n * (n*n + 1) // 2  # The target sum S
-    solutions = [comb for comb in itertools.combinations(numbers, n) if sum(comb) == target]
-    return solutions
+def generate_magic_square(n):
+    if n % 2 == 1:
+        magic_square = [[0] * n for _ in range(n)]
+        num = 1
+        i, j = 0, n // 2
+        while num <= n * n:
+            magic_square[i][j] = num
+            num += 1
+            ni, nj = (i - 1) % n, (j + 1) % n
+            if magic_square[ni][nj]:
+                i = (i + 1) % n
+            else:
+                i, j = ni, nj
+        return magic_square
+    elif n % 4 == 0:
+        magic_square = [[(n * i) + j + 1 for j in range(n)] for i in range(n)]
+        for i in range(n):
+            for j in range(n):
+                if (i % 4 == j % 4) or (i % 4 + j % 4 == 3):
+                    magic_square[i][j] = n * n + 1 - magic_square[i][j]
+        return magic_square
+    else:
+        def swap_cells(square, a, b, r):
+            for i in range(r):
+                square[i][a], square[i][b] = square[i][b], square[i][a]
 
-n=int(input("Enter a number:  "))
-square=np.zeros((n,n))
-possible_nums=[i for i in range(1,n*n+1)]
+        p = n // 2
+        k = (n - 2) // 4
+        sub_square = generate_magic_square(p)
+        magic_square = [[0] * n for _ in range(n)]
+        for i in range(p):
+            for j in range(p):
+                magic_square[i][j] = sub_square[i][j]
+                magic_square[i + p][j + p] = sub_square[i][j] + p * p
+                magic_square[i][j + p] = sub_square[i][j] + 2 * p * p
+                magic_square[i + p][j] = sub_square[i][j] + 3 * p * p
 
-sols=np.array(find_combinations(n))
-sols.flatten()
-s_frequency=np.zeros(n*n+1 ,dtype=int)
-center_values=[]#4
-edge_values=[]#2
-corner_values=[]#3
-for s in sols:
-    s_frequency[s]+=1
-for i in range(n*n+1):
-    if(s_frequency[i]==4):
-        center_values.append(i)
-    elif(s_frequency[i]==3):
-        corner_values.append(i)
-    elif(s_frequency[i]==2):
-        edge_values.append(i)
+        for i in range(p):
+            for j in range(k):
+                magic_square[i][j], magic_square[i + p][j] = magic_square[i + p][j], magic_square[i][j]
+        for i in range(p):
+            for j in range(n - k + 1, n):
+                magic_square[i][j], magic_square[i + p][j] = magic_square[i + p][j], magic_square[i][j]
+        magic_square[p // 2][0], magic_square[p // 2 + p][0] = magic_square[p // 2 + p][0], magic_square[p // 2][0]
+        return magic_square
 
-if(n%2==0):
-    center=[(n//2, n//2), (n//2-1, n//2), (n//2, n//2 -1), (n//2 -1, n//2 -1)]
-else:
-    center=[(n/2,n/2)]
-
-coener=[(0,0), (0,n-1), (n-1,0), (n-1, n-1)]
-#rest other are bulk
-print(s_frequency)
-print(sols)
+for n in range(4, 9):
+    print(f"Magic Square for N={n}")
+    square = generate_magic_square(n)
+    for row in square:
+        print(row)
+    print()
